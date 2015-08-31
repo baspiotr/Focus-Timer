@@ -20,9 +20,7 @@
 - (instancetype)init
 {
     self.tableView.delegate = self;
-    
-   
-    
+
     return self;
 }
 
@@ -39,32 +37,24 @@ int seconds = 25*60;
     
     switch (indexPath.row) {
         case 0:
-            NSLog(@"%@",@"Czas 5 min");
-//            [TimerViewController setSeconds:5*60];
             seconds = 5*60;
             break;
         case 1:
-//            [TimerViewController setSeconds:10*60];
             seconds = 10*60;
             break;
         case 2:
-//            [TimerViewController setSeconds:15*60];
             seconds = 15*60;
             break;
         case 3:
-//            [TimerViewController setSeconds:20*60];
             seconds = 20*60;
             break;
         case 4:
-//            [TimerViewController setSeconds:25*60];
             seconds  = 25*60;
             break;
         case 5:
-//            [TimerViewController setSeconds:30*60];
             seconds = 30*60;
             break;
         case 6:
-//            [TimerViewController setSeconds:35*60];
             seconds = 35*60;
             break;
             

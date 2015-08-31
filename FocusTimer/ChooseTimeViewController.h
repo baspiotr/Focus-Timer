@@ -10,8 +10,6 @@
 
 @interface ChooseTimeViewController : UITableViewController
 
-
-
 + (int)getSeconds;
 
 @end

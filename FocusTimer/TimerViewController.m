@@ -59,7 +59,8 @@ ChoosenColorRGBValues myColor;
         
         [timer invalidate];
         timer = nil;
-        self.timeLabel.text = @"00:00";
+        
+        self.timeLabel.text = [NSString stringWithFormat:@"%d:00",startSecondsValue/60];
         
     }
     
