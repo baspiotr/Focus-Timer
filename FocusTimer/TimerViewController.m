@@ -9,6 +9,7 @@
 #import "TimerViewController.h"
 #import "ChooseTimeViewController.h"
 #import "ChooseColorViewController.h"
+#import "CircleProgressView.h"
 
 @interface TimerViewController ()
 
@@ -18,6 +19,11 @@
 @property (nonatomic, weak) IBOutlet UILabel *startClickableLabel;
 
 @property (strong, nonatomic) IBOutlet UIView *mainView;
+
+@property (weak, nonatomic) IBOutlet CircleProgressView *circleProgressView;
+
+
+
 
 
 @end
@@ -46,10 +52,10 @@ ChoosenColorRGBValues myColor;
         
         startSecondsValue = secondsToEnd;
         
-        
         self.startClickableLabel.text = @"Stop";
         
         
+                 
         
         timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(runOperations:) userInfo:nil repeats:YES];
         
@@ -81,13 +87,21 @@ ChoosenColorRGBValues myColor;
     
     NSString *timeStr = [NSString stringWithFormat:@"%2d:%2d",minutes,seconds];
     
-    
     double procentOfComplete = ((((double)secondsToEnd/(double)startSecondsValue)*-100)+100)/100;
-    
-//    NSLog(@"procent = %f",procentOfComplete);
     
     [self.timeProgressView setProgress:procentOfComplete animated:YES];
     
+    
+   
+    
+
+    
+    
+//   self.circleProgressView.progress = procentOfComplete *1000;
+   
+//    [self.circleProgressView drawTintProgress];
+    
+//    NSLog(@"procent of complete %f",procentOfComplete*1000);
     
     
     
@@ -124,21 +138,15 @@ ChoosenColorRGBValues myColor;
     myColor.red = color.red;
     myColor.blue = color.blue;
     myColor.green = color.green;
-    
-    
 }
 
 
 - (void)setBackgorundColorFromRGB
 {
     
-    NSLog(@"myColor r = %d , b = %d , g = %d",myColor.red,myColor.blue,myColor.green);
+//    NSLog(@"myColor r = %d , b = %d , g = %d",myColor.red,myColor.blue,myColor.green);
     
     self.mainView.backgroundColor = [UIColor colorWithRed:myColor.red/255.0 green:myColor.green/255.0 blue:myColor.blue/255.0 alpha:1];
-    
-
-    
-    
 }
 
 

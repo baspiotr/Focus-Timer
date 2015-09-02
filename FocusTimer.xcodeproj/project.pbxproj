@@ -17,6 +17,7 @@
 		AE3BA6B31B91A9C9009940C7 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3BA6B21B91A9C9009940C7 /* TimerViewController.m */; };
 		AE3BA6B61B91C653009940C7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3BA6B51B91C653009940C7 /* SettingsViewController.m */; };
 		AE42B5DE1B9438C00045933B /* ChooseColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE42B5DD1B9438C00045933B /* ChooseColorViewController.m */; };
+		AE8B1DDE1B94AC2B00E82D53 /* CircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8B1DDD1B94AC2B00E82D53 /* CircleProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		AE3BA6B51B91C653009940C7 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		AE42B5DC1B9438C00045933B /* ChooseColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseColorViewController.h; sourceTree = "<group>"; };
 		AE42B5DD1B9438C00045933B /* ChooseColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseColorViewController.m; sourceTree = "<group>"; };
+		AE8B1DDC1B94AC2B00E82D53 /* CircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleProgressView.h; sourceTree = "<group>"; };
+		AE8B1DDD1B94AC2B00E82D53 /* CircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,8 @@
 				AE3BA6981B91A2E3009940C7 /* Images.xcassets */,
 				AE3BA69A1B91A2E3009940C7 /* LaunchScreen.xib */,
 				AE3BA68B1B91A2E3009940C7 /* Supporting Files */,
+				AE8B1DDC1B94AC2B00E82D53 /* CircleProgressView.h */,
+				AE8B1DDD1B94AC2B00E82D53 /* CircleProgressView.m */,
 			);
 			path = FocusTimer;
 			sourceTree = "<group>";
@@ -239,6 +244,7 @@
 				AE14C90F1B91F7D100EE6826 /* ChooseTimeViewController.m in Sources */,
 				AE42B5DE1B9438C00045933B /* ChooseColorViewController.m in Sources */,
 				AE3BA68E1B91A2E3009940C7 /* main.m in Sources */,
+				AE8B1DDE1B94AC2B00E82D53 /* CircleProgressView.m in Sources */,
 				AE3BA6B61B91C653009940C7 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
