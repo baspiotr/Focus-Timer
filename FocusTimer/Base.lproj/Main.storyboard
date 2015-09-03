@@ -19,59 +19,55 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jkb-a1-dV1" customClass="CircleProgressView">
                                 <rect key="frame" x="16" y="20" width="568" height="531"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fV2-x0-9Vq">
+                                        <rect key="frame" x="221" y="173" width="127" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="127" id="3Uy-WD-joh"/>
+                                            <constraint firstAttribute="height" constant="54" id="HHO-lA-FgP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFp-qk-9M4">
+                                        <rect key="frame" x="259" y="250" width="51" height="32"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="crc-sd-Z9l"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="ThX-x9-YT7" appends="YES" id="icb-et-wi3"/>
+                                        </connections>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fV2-x0-9Vq">
-                                <rect key="frame" x="249" y="198" width="102" height="49"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="2E6-Xk-4WU"/>
-                                    <constraint firstAttribute="width" constant="102" id="ru4-mf-dbf"/>
+                                    <constraint firstItem="JFp-qk-9M4" firstAttribute="top" secondItem="fV2-x0-9Vq" secondAttribute="bottom" constant="23" id="057-v0-QSs"/>
+                                    <constraint firstItem="fV2-x0-9Vq" firstAttribute="top" secondItem="jkb-a1-dV1" secondAttribute="top" constant="173" id="1iI-J4-ie3"/>
+                                    <constraint firstItem="fV2-x0-9Vq" firstAttribute="centerX" secondItem="JFp-qk-9M4" secondAttribute="centerX" id="PZN-cn-KTp"/>
+                                    <constraint firstItem="fV2-x0-9Vq" firstAttribute="centerX" secondItem="jkb-a1-dV1" secondAttribute="centerX" id="UhE-cW-YoO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="751" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FNy-AW-id1">
-                                <rect key="frame" x="16" y="277" width="568" height="2"/>
-                                <color key="progressTintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="trackTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </progressView>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Start" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFp-qk-9M4">
-                                <rect key="frame" x="275" y="371" width="51" height="32"/>
-                                <gestureRecognizers/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="ThX-x9-YT7" appends="YES" id="icb-et-wi3"/>
-                                </connections>
-                            </label>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jkb-a1-dV1" firstAttribute="top" secondItem="bvV-mb-6dW" secondAttribute="bottom" id="0en-9n-wpz"/>
-                            <constraint firstItem="FNy-AW-id1" firstAttribute="top" secondItem="fV2-x0-9Vq" secondAttribute="bottom" constant="30" id="3YW-6F-f0a"/>
-                            <constraint firstItem="jkb-a1-dV1" firstAttribute="leading" secondItem="FNy-AW-id1" secondAttribute="leading" id="7bw-3Q-1YL"/>
-                            <constraint firstItem="jkb-a1-dV1" firstAttribute="trailing" secondItem="FNy-AW-id1" secondAttribute="trailing" id="AGd-vh-yZn"/>
-                            <constraint firstAttribute="centerX" secondItem="FNy-AW-id1" secondAttribute="centerX" id="BBA-6P-Dfh"/>
-                            <constraint firstItem="FNy-AW-id1" firstAttribute="leading" secondItem="dVW-Lx-1TX" secondAttribute="leadingMargin" id="CKO-2j-kVx"/>
-                            <constraint firstAttribute="centerX" secondItem="JFp-qk-9M4" secondAttribute="centerX" id="H8w-h7-JVY"/>
-                            <constraint firstItem="fV2-x0-9Vq" firstAttribute="centerX" secondItem="FNy-AW-id1" secondAttribute="centerX" id="KzZ-SR-3b9"/>
-                            <constraint firstItem="JFp-qk-9M4" firstAttribute="top" secondItem="FNy-AW-id1" secondAttribute="bottom" constant="93" id="V32-o5-tGN"/>
-                            <constraint firstItem="FNy-AW-id1" firstAttribute="trailing" secondItem="dVW-Lx-1TX" secondAttribute="trailingMargin" id="W9H-zc-Lx8"/>
-                            <constraint firstItem="fV2-x0-9Vq" firstAttribute="top" secondItem="bvV-mb-6dW" secondAttribute="bottom" constant="178" id="Xq2-7p-qd1"/>
-                            <constraint firstItem="jkb-a1-dV1" firstAttribute="bottom" secondItem="tR0-cj-HSi" secondAttribute="top" id="lWZ-S2-zxJ"/>
-                            <constraint firstItem="tR0-cj-HSi" firstAttribute="top" secondItem="JFp-qk-9M4" secondAttribute="bottom" constant="148" id="lpf-H6-duZ"/>
+                            <constraint firstItem="jkb-a1-dV1" firstAttribute="leading" secondItem="dVW-Lx-1TX" secondAttribute="leadingMargin" id="Q6a-Xm-uTA"/>
+                            <constraint firstItem="jkb-a1-dV1" firstAttribute="top" secondItem="bvV-mb-6dW" secondAttribute="bottom" id="SV2-I4-0S0"/>
+                            <constraint firstItem="jkb-a1-dV1" firstAttribute="bottom" secondItem="tR0-cj-HSi" secondAttribute="top" id="YTi-b5-gwk"/>
+                            <constraint firstItem="jkb-a1-dV1" firstAttribute="trailing" secondItem="dVW-Lx-1TX" secondAttribute="trailingMargin" id="aXY-mb-m4r"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Timer" image="TimerImage" id="5OS-x9-BUy"/>
                     <navigationItem key="navigationItem" id="JlH-E7-Afz"/>
                     <connections>
-                        <outlet property="circleProgressView" destination="jkb-a1-dV1" id="Xvu-21-Mn5"/>
+                        <outlet property="circleView" destination="jkb-a1-dV1" id="yOL-7R-mlI"/>
                         <outlet property="mainView" destination="dVW-Lx-1TX" id="37h-Ud-tO9"/>
                         <outlet property="startClickableLabel" destination="JFp-qk-9M4" id="fJa-M6-Bc2"/>
                         <outlet property="timeLabel" destination="fV2-x0-9Vq" id="KW6-mU-8YO"/>
-                        <outlet property="timeProgressView" destination="FNy-AW-id1" id="XOn-fA-rVx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yHW-sM-Xu3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -82,24 +78,6 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1385" y="872"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="tBU-sR-3xo">
-            <objects>
-                <viewController id="GcQ-af-ub9" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xwL-S9-Wqb"/>
-                        <viewControllerLayoutGuide type="bottom" id="Jqc-dS-7Td"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QLo-Jk-lhO" customClass="CircleProgressView">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rcf-Hp-8GA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2135" y="848"/>
         </scene>
         <!--Settings-->
         <scene sceneID="Nn2-D7-Sug">
@@ -144,24 +122,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="cFc-Yh-k7s" kind="push" id="wc1-8q-Co9"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="VSb-KE-KNZ" style="IBUITableViewCellStyleDefault" id="UHa-CQ-2hK">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UHa-CQ-2hK" id="QR8-6x-zwR">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="go to test progress bar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VSb-KE-KNZ">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="GcQ-af-ub9" kind="show" id="GFM-k8-fYY"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>

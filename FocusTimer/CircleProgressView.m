@@ -7,6 +7,7 @@
 //
 
 #import "CircleProgressView.h"
+#import "TimerViewController.h"
 
 @interface CircleProgressView ()
 
@@ -17,9 +18,9 @@
 
 @implementation CircleProgressView
 
-UIBezierPath *pathInside;
 CGPoint center;
 float radius;
+
 
 - (void)setUp
 {
@@ -30,7 +31,6 @@ float radius;
     
     radius = MIN(bounds.size.width, bounds.size.height)/2;
     
-    self.progress = 0;
     
 }
 
@@ -39,7 +39,6 @@ float radius;
 {
     
     [self setUp];
-    
     
     UIBezierPath *path = [[UIBezierPath alloc]init];
     
@@ -50,21 +49,16 @@ float radius;
     
     [path stroke];
     
-    [self setProgress:5];
-    [self setProgress:15];
-    [self setProgress:25];
-    [self setProgress:35];
-    [self setProgress:45];
-    [self setProgress:55];
+    [self setProgress:self.progressProcent];
 
-    
-    
 }
 
 - (void)setProgress:(float)progress;
 {
     
     float procent = progress;
+    
+    UIBezierPath *pathInside;
     
     if(!pathInside){
     pathInside = [[UIBezierPath alloc]init];

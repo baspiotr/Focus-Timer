@@ -9,21 +9,20 @@
 #import "TimerViewController.h"
 #import "ChooseTimeViewController.h"
 #import "ChooseColorViewController.h"
+
 #import "CircleProgressView.h"
+
 
 @interface TimerViewController ()
 
 
 @property (nonatomic, weak) IBOutlet UILabel *timeLabel;
-@property (nonatomic, weak) IBOutlet UIProgressView *timeProgressView;
+
 @property (nonatomic, weak) IBOutlet UILabel *startClickableLabel;
 
 @property (strong, nonatomic) IBOutlet UIView *mainView;
 
-@property (weak, nonatomic) IBOutlet CircleProgressView *circleProgressView;
-
-
-
+@property (weak, nonatomic) IBOutlet CircleProgressView *circleView;
 
 
 @end
@@ -35,6 +34,7 @@ NSTimer *timer;
 int counter=0;
 
 int startSecondsValue;
+double procentOfComplete;
 
 
 ChoosenColorRGBValues myColor;
@@ -53,9 +53,6 @@ ChoosenColorRGBValues myColor;
         startSecondsValue = secondsToEnd;
         
         self.startClickableLabel.text = @"Stop";
-        
-        
-                 
         
         timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(runOperations:) userInfo:nil repeats:YES];
         
@@ -87,24 +84,11 @@ ChoosenColorRGBValues myColor;
     
     NSString *timeStr = [NSString stringWithFormat:@"%2d:%2d",minutes,seconds];
     
-    double procentOfComplete = ((((double)secondsToEnd/(double)startSecondsValue)*-100)+100)/100;
+    procentOfComplete = ((((double)secondsToEnd/(double)startSecondsValue)*-100)+100)/100;
     
-    [self.timeProgressView setProgress:procentOfComplete animated:YES];
+    self.circleView.progressProcent = procentOfComplete*100;
     
-    
-   
-    
-
-    
-    
-//   self.circleProgressView.progress = procentOfComplete *1000;
-   
-//    [self.circleProgressView drawTintProgress];
-    
-//    NSLog(@"procent of complete %f",procentOfComplete*1000);
-    
-    
-    
+    [self.circleView setNeedsDisplay];
     
     self.timeLabel.text = timeStr;
     
@@ -112,6 +96,12 @@ ChoosenColorRGBValues myColor;
         [timer invalidate];
         timer = nil;
     }
+}
+
+
++ (float)getProcentForCircleBar
+{
+    return (float)(procentOfComplete*1000);
 }
 
 

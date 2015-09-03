@@ -11,8 +11,11 @@
 
 @interface TimerViewController : UIViewController
 
++ (float)getProcentForCircleBar;
+
 - (void)setBackgorundColorFromRGB;
 + (void)setColorStructure:(ChoosenColorRGBValues)color;
+
 
 @end
 

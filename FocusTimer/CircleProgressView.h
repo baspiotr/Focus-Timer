@@ -10,6 +10,9 @@
 
 @interface CircleProgressView : UIView
 
+
+@property (nonatomic) float progressProcent;
+
 - (void)setProgress:(float)progress;
 
 
