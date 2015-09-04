@@ -18,6 +18,8 @@
 		AE3BA6B61B91C653009940C7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3BA6B51B91C653009940C7 /* SettingsViewController.m */; };
 		AE42B5DE1B9438C00045933B /* ChooseColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE42B5DD1B9438C00045933B /* ChooseColorViewController.m */; };
 		AE8B1DDE1B94AC2B00E82D53 /* CircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8B1DDD1B94AC2B00E82D53 /* CircleProgressView.m */; };
+		AEEC4EB01B9993CF00145E65 /* TaskTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEC4EAF1B9993CF00145E65 /* TaskTableViewController.m */; };
+		AEEC4EB51B9998A300145E65 /* TaskAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEC4EB41B9998A300145E65 /* TaskAddViewController.m */; };
 		AEEE231C1B9843AF003D641A /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEE231B1B9843AF003D641A /* Task.m */; };
 		AEEE231F1B9849F6003D641A /* TaskStore.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEE231E1B9849F6003D641A /* TaskStore.m */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,10 @@
 		AE42B5DD1B9438C00045933B /* ChooseColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseColorViewController.m; sourceTree = "<group>"; };
 		AE8B1DDC1B94AC2B00E82D53 /* CircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleProgressView.h; sourceTree = "<group>"; };
 		AE8B1DDD1B94AC2B00E82D53 /* CircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleProgressView.m; sourceTree = "<group>"; };
+		AEEC4EAE1B9993CF00145E65 /* TaskTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTableViewController.h; sourceTree = "<group>"; };
+		AEEC4EAF1B9993CF00145E65 /* TaskTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewController.m; sourceTree = "<group>"; };
+		AEEC4EB31B9998A300145E65 /* TaskAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskAddViewController.h; sourceTree = "<group>"; };
+		AEEC4EB41B9998A300145E65 /* TaskAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskAddViewController.m; sourceTree = "<group>"; };
 		AEEE231A1B9843AF003D641A /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		AEEE231B1B9843AF003D641A /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		AEEE231D1B9849F6003D641A /* TaskStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskStore.h; sourceTree = "<group>"; };
@@ -109,13 +115,12 @@
 				AE14C90E1B91F7D100EE6826 /* ChooseTimeViewController.m */,
 				AE42B5DC1B9438C00045933B /* ChooseColorViewController.h */,
 				AE42B5DD1B9438C00045933B /* ChooseColorViewController.m */,
-				AE8B1DDC1B94AC2B00E82D53 /* CircleProgressView.h */,
-				AE8B1DDD1B94AC2B00E82D53 /* CircleProgressView.m */,
-				AEEE231A1B9843AF003D641A /* Task.h */,
-				AEEE231B1B9843AF003D641A /* Task.m */,
-				AEEE231D1B9849F6003D641A /* TaskStore.h */,
-				AEEE231E1B9849F6003D641A /* TaskStore.m */,
-				AE3BA6951B91A2E3009940C7 /* Main.storyboard */,
+				AEEC4EAE1B9993CF00145E65 /* TaskTableViewController.h */,
+				AEEC4EAF1B9993CF00145E65 /* TaskTableViewController.m */,
+				AEEC4EB31B9998A300145E65 /* TaskAddViewController.h */,
+				AEEC4EB41B9998A300145E65 /* TaskAddViewController.m */,
+				AEEC4EB21B99981C00145E65 /* VIew */,
+				AEEC4EB11B9997E800145E65 /* Model */,
 				AE3BA6981B91A2E3009940C7 /* Images.xcassets */,
 				AE3BA69A1B91A2E3009940C7 /* LaunchScreen.xib */,
 				AE3BA68B1B91A2E3009940C7 /* Supporting Files */,
@@ -147,6 +152,27 @@
 				AE3BA6A61B91A2E3009940C7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEEC4EB11B9997E800145E65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AEEE231A1B9843AF003D641A /* Task.h */,
+				AEEE231B1B9843AF003D641A /* Task.m */,
+				AEEE231D1B9849F6003D641A /* TaskStore.h */,
+				AEEE231E1B9849F6003D641A /* TaskStore.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		AEEC4EB21B99981C00145E65 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				AE3BA6951B91A2E3009940C7 /* Main.storyboard */,
+				AE8B1DDC1B94AC2B00E82D53 /* CircleProgressView.h */,
+				AE8B1DDD1B94AC2B00E82D53 /* CircleProgressView.m */,
+			);
+			name = VIew;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +277,7 @@
 			files = (
 				AE3BA6B31B91A9C9009940C7 /* TimerViewController.m in Sources */,
 				AE3BA6911B91A2E3009940C7 /* AppDelegate.m in Sources */,
+				AEEC4EB01B9993CF00145E65 /* TaskTableViewController.m in Sources */,
 				AE14C90F1B91F7D100EE6826 /* ChooseTimeViewController.m in Sources */,
 				AE42B5DE1B9438C00045933B /* ChooseColorViewController.m in Sources */,
 				AEEE231C1B9843AF003D641A /* Task.m in Sources */,
@@ -258,6 +285,7 @@
 				AE8B1DDE1B94AC2B00E82D53 /* CircleProgressView.m in Sources */,
 				AE3BA6B61B91C653009940C7 /* SettingsViewController.m in Sources */,
 				AEEE231F1B9849F6003D641A /* TaskStore.m in Sources */,
+				AEEC4EB51B9998A300145E65 /* TaskAddViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
