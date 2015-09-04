@@ -9,7 +9,6 @@
 #import "TimerViewController.h"
 #import "ChooseTimeViewController.h"
 #import "ChooseColorViewController.h"
-
 #import "CircleProgressView.h"
 
 
@@ -29,20 +28,15 @@
 
 @implementation TimerViewController
 
-static int secondsToEnd = 25*60;
+int secondsToEnd = 25*60;
 NSTimer *timer;
 int counter=0;
 
 int startSecondsValue;
 double procentOfComplete;
-
-
 ChoosenColorRGBValues myColor;
 
-
 #pragma mark timer operations
-
-
 
 - (IBAction)runTimer:(id)sender {
   
@@ -63,8 +57,14 @@ ChoosenColorRGBValues myColor;
         [timer invalidate];
         timer = nil;
         
-        self.timeLabel.text = [NSString stringWithFormat:@"%d:00",startSecondsValue/60];
+        int min = startSecondsValue/60;
         
+        if(min==5) {
+            self.timeLabel.text = [NSString stringWithFormat:@"0%d:00",min];
+        } else {
+            self.timeLabel.text = [NSString stringWithFormat:@"%d:00",min];
+        }
+    
     }
     
     counter++;
@@ -72,8 +72,6 @@ ChoosenColorRGBValues myColor;
     if(counter>10000)counter=1;
 
 }
-
-
 
 - (void)runOperations:sender
 {
@@ -84,9 +82,9 @@ ChoosenColorRGBValues myColor;
     
     NSString *timeStr = [NSString stringWithFormat:@"%2d:%2d",minutes,seconds];
     
-    procentOfComplete = ((((double)secondsToEnd/(double)startSecondsValue)*-100)+100)/100;
+    procentOfComplete = ((((double)secondsToEnd/(double)startSecondsValue)*-100)+100);
     
-    self.circleView.progressProcent = procentOfComplete*100;
+    self.circleView.progressProcent = procentOfComplete;
     
     [self.circleView setNeedsDisplay];
     
@@ -97,14 +95,6 @@ ChoosenColorRGBValues myColor;
         timer = nil;
     }
 }
-
-
-+ (float)getProcentForCircleBar
-{
-    return (float)(procentOfComplete*1000);
-}
-
-
 
 #pragma mark view 
 
@@ -133,18 +123,8 @@ ChoosenColorRGBValues myColor;
 
 - (void)setBackgorundColorFromRGB
 {
-    
-//    NSLog(@"myColor r = %d , b = %d , g = %d",myColor.red,myColor.blue,myColor.green);
-    
     self.mainView.backgroundColor = [UIColor colorWithRed:myColor.red/255.0 green:myColor.green/255.0 blue:myColor.blue/255.0 alpha:1];
 }
-
-
-
-
-
-
-
 
 
 @end
