@@ -112,6 +112,18 @@ ChoosenColorRGBValues myColor;
     [self setBackgorundColorFromRGB];
     
     self.currentTaskNameLabel.text = [TaskStore sharedStore].currentSelectedTaskName;
+
+    int time = [ChooseTimeViewController getSeconds]/60;
+    NSString *temp;
+    
+    
+    if(time>=10){
+         temp = [NSString stringWithFormat:@"%d:00",time];
+    } else {
+         temp = [NSString stringWithFormat:@"0%d:00",time];
+    }
+    
+    self.timeLabel.text = temp;
 }
 
 
