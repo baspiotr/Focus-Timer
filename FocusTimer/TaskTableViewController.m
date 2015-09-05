@@ -87,8 +87,8 @@
         
         NSInteger row = [self.tableView indexPathForSelectedRow].row;
         
-        
-        [td setTaskNameOnLabel:[[[[TaskStore sharedStore]allTasks]objectAtIndex:row] taskName]];
+       td.name = [[[[TaskStore sharedStore]allTasks]objectAtIndex:row] taskName];
+       
         
 
         

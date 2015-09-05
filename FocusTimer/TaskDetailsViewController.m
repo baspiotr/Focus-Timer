@@ -10,24 +10,19 @@
 
 @interface TaskDetailsViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *taskNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *timeSpentLabel;
 
 @end
 
 @implementation TaskDetailsViewController
 
 
-- (void)setTaskNameOnLabel:(NSString *)name
+- (void)viewWillAppear:(BOOL)animated
 {
-    NSLog(@"name = '%@'",name);
-    
-    self.taskNameLabel.text = name;
-    
-      self.taskNameLabel.text = @"asf";
+    [super viewWillAppear:animated];
+    self.nameLabel.text = self.name;
 }
-
 
 
 
