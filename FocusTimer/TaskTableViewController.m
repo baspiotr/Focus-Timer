@@ -9,6 +9,7 @@
 #import "TaskTableViewController.h"
 #import "TaskStore.h"
 #import "Task.h"
+#import "TimerViewController.h"
 
 @interface TaskTableViewController ()
 
@@ -30,8 +31,7 @@
 {
     [super viewWillAppear:animated];
     
-    [self.view setNeedsDisplay];
-        
+    [self.tableView reloadData];
     
 }
 
@@ -59,11 +59,18 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"taskCell" forIndexPath:indexPath];
     
     // Configure the cell...
-
+    
     cell.textLabel.text = [[[[TaskStore sharedStore]allTasks]objectAtIndex:indexPath.row] taskName];
     
     return cell;
 }
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [TaskStore sharedStore].currentSelectedTaskName = [[[[TaskStore sharedStore]allTasks]objectAtIndex:indexPath.row] taskName];
+}
+
 
 
 /*

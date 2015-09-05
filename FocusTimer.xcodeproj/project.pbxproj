@@ -18,6 +18,7 @@
 		AE3BA6B61B91C653009940C7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3BA6B51B91C653009940C7 /* SettingsViewController.m */; };
 		AE42B5DE1B9438C00045933B /* ChooseColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE42B5DD1B9438C00045933B /* ChooseColorViewController.m */; };
 		AE8B1DDE1B94AC2B00E82D53 /* CircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8B1DDD1B94AC2B00E82D53 /* CircleProgressView.m */; };
+		AEB321691B9AF18A001FEE81 /* TaskDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB321681B9AF18A001FEE81 /* TaskDetailsViewController.m */; };
 		AEEC4EB01B9993CF00145E65 /* TaskTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEC4EAF1B9993CF00145E65 /* TaskTableViewController.m */; };
 		AEEC4EB51B9998A300145E65 /* TaskAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEC4EB41B9998A300145E65 /* TaskAddViewController.m */; };
 		AEEE231C1B9843AF003D641A /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEE231B1B9843AF003D641A /* Task.m */; };
@@ -56,6 +57,8 @@
 		AE42B5DD1B9438C00045933B /* ChooseColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseColorViewController.m; sourceTree = "<group>"; };
 		AE8B1DDC1B94AC2B00E82D53 /* CircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleProgressView.h; sourceTree = "<group>"; };
 		AE8B1DDD1B94AC2B00E82D53 /* CircleProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleProgressView.m; sourceTree = "<group>"; };
+		AEB321671B9AF18A001FEE81 /* TaskDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskDetailsViewController.h; sourceTree = "<group>"; };
+		AEB321681B9AF18A001FEE81 /* TaskDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskDetailsViewController.m; sourceTree = "<group>"; };
 		AEEC4EAE1B9993CF00145E65 /* TaskTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskTableViewController.h; sourceTree = "<group>"; };
 		AEEC4EAF1B9993CF00145E65 /* TaskTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewController.m; sourceTree = "<group>"; };
 		AEEC4EB31B9998A300145E65 /* TaskAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskAddViewController.h; sourceTree = "<group>"; };
@@ -119,6 +122,8 @@
 				AEEC4EAF1B9993CF00145E65 /* TaskTableViewController.m */,
 				AEEC4EB31B9998A300145E65 /* TaskAddViewController.h */,
 				AEEC4EB41B9998A300145E65 /* TaskAddViewController.m */,
+				AEB321671B9AF18A001FEE81 /* TaskDetailsViewController.h */,
+				AEB321681B9AF18A001FEE81 /* TaskDetailsViewController.m */,
 				AEEC4EB21B99981C00145E65 /* VIew */,
 				AEEC4EB11B9997E800145E65 /* Model */,
 				AE3BA6981B91A2E3009940C7 /* Images.xcassets */,
@@ -277,6 +282,7 @@
 			files = (
 				AE3BA6B31B91A9C9009940C7 /* TimerViewController.m in Sources */,
 				AE3BA6911B91A2E3009940C7 /* AppDelegate.m in Sources */,
+				AEB321691B9AF18A001FEE81 /* TaskDetailsViewController.m in Sources */,
 				AEEC4EB01B9993CF00145E65 /* TaskTableViewController.m in Sources */,
 				AE14C90F1B91F7D100EE6826 /* ChooseTimeViewController.m in Sources */,
 				AE42B5DE1B9438C00045933B /* ChooseColorViewController.m in Sources */,
@@ -414,6 +420,7 @@
 				INFOPLIST_FILE = FocusTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -424,6 +431,7 @@
 				INFOPLIST_FILE = FocusTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

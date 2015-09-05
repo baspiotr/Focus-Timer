@@ -10,6 +10,7 @@
 #import "ChooseTimeViewController.h"
 #import "ChooseColorViewController.h"
 #import "CircleProgressView.h"
+#import "TaskStore.h"
 
 
 @interface TimerViewController ()
@@ -23,6 +24,7 @@
 
 @property (weak, nonatomic) IBOutlet CircleProgressView *circleView;
 
+@property (weak, nonatomic) IBOutlet UILabel *currentTaskNameLabel;
 
 @end
 
@@ -108,6 +110,8 @@ ChoosenColorRGBValues myColor;
 - (void)viewWillAppear:(BOOL)animated
 {
     [self setBackgorundColorFromRGB];
+    
+    self.currentTaskNameLabel.text = [TaskStore sharedStore].currentSelectedTaskName;
 }
 
 

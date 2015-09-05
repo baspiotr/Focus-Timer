@@ -14,7 +14,6 @@
 - (void)setBackgorundColorFromRGB;
 + (void)setColorStructure:(ChoosenColorRGBValues)color;
 
-
 @end
 
 

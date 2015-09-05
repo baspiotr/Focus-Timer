@@ -12,6 +12,7 @@
 @interface TaskStore : NSObject
 
 @property (nonatomic, readonly) NSArray *allTasks;
+@property (nonatomic) NSString *currentSelectedTaskName;
 
 + (instancetype)sharedStore;
 
