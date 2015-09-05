@@ -19,8 +19,14 @@
 @implementation TaskDetailsViewController
 
 
-
-
+- (void)setTaskNameOnLabel:(NSString *)name
+{
+    NSLog(@"name = '%@'",name);
+    
+    self.taskNameLabel.text = name;
+    
+      self.taskNameLabel.text = @"asf";
+}
 
 
 

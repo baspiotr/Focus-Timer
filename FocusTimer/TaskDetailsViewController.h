@@ -10,4 +10,6 @@
 
 @interface TaskDetailsViewController : UIViewController
 
+- (void)setTaskNameOnLabel:(NSString *)name;
+
 @end

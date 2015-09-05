@@ -184,7 +184,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="P8V-ue-4fv" kind="show" id="cSb-rf-8Cj"/>
+                                    <segue destination="P8V-ue-4fv" kind="show" identifier="taskName" id="cSb-rf-8Cj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -197,7 +197,7 @@
                     <navigationItem key="navigationItem" title="Task Manager" id="9Fs-kd-D6H">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7Qo-hg-LpX">
                             <connections>
-                                <segue destination="IG6-74-bht" kind="show" id="8lG-eH-paC"/>
+                                <segue destination="IG6-74-bht" kind="show" identifier="" id="8lG-eH-paC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -284,14 +284,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjO-MN-Xz5">
-                                <rect key="frame" x="149" y="104" width="146" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9M-hb-Q0P">
+                                <rect key="frame" x="159" y="160" width="146" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9M-hb-Q0P">
-                                <rect key="frame" x="159" y="160" width="146" height="33"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjO-MN-Xz5">
+                                <rect key="frame" x="154" y="110" width="146" height="33"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -300,13 +300,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="taskNameLabel" destination="fjO-MN-Xz5" id="7ay-mr-eC3"/>
+                        <outlet property="taskNameLabel" destination="fjO-MN-Xz5" id="rez-rd-uiV"/>
                         <outlet property="timeSpentLabel" destination="w9M-hb-Q0P" id="PAB-Mb-0sZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9e-LJ-t87" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3838" y="950"/>
+            <point key="canvasLocation" x="3765" y="953"/>
         </scene>
         <!--Choose time-->
         <scene sceneID="JSE-ZS-0se">
