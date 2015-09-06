@@ -15,7 +15,6 @@
 		AE3BA69C1B91A2E3009940C7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE3BA69A1B91A2E3009940C7 /* LaunchScreen.xib */; };
 		AE3BA6A81B91A2E3009940C7 /* FocusTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3BA6A71B91A2E3009940C7 /* FocusTimerTests.m */; };
 		AE3BA6B31B91A9C9009940C7 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3BA6B21B91A9C9009940C7 /* TimerViewController.m */; };
-		AE3BA6B61B91C653009940C7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3BA6B51B91C653009940C7 /* SettingsViewController.m */; };
 		AE42B5DE1B9438C00045933B /* ChooseColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE42B5DD1B9438C00045933B /* ChooseColorViewController.m */; };
 		AE8B1DDE1B94AC2B00E82D53 /* CircleProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8B1DDD1B94AC2B00E82D53 /* CircleProgressView.m */; };
 		AEB321691B9AF18A001FEE81 /* TaskDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEB321681B9AF18A001FEE81 /* TaskDetailsViewController.m */; };
@@ -51,8 +50,6 @@
 		AE3BA6A71B91A2E3009940C7 /* FocusTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FocusTimerTests.m; sourceTree = "<group>"; };
 		AE3BA6B11B91A9C9009940C7 /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		AE3BA6B21B91A9C9009940C7 /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
-		AE3BA6B41B91C653009940C7 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		AE3BA6B51B91C653009940C7 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		AE42B5DC1B9438C00045933B /* ChooseColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseColorViewController.h; sourceTree = "<group>"; };
 		AE42B5DD1B9438C00045933B /* ChooseColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseColorViewController.m; sourceTree = "<group>"; };
 		AE8B1DDC1B94AC2B00E82D53 /* CircleProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleProgressView.h; sourceTree = "<group>"; };
@@ -112,8 +109,6 @@
 				AE3BA6901B91A2E3009940C7 /* AppDelegate.m */,
 				AE3BA6B11B91A9C9009940C7 /* TimerViewController.h */,
 				AE3BA6B21B91A9C9009940C7 /* TimerViewController.m */,
-				AE3BA6B41B91C653009940C7 /* SettingsViewController.h */,
-				AE3BA6B51B91C653009940C7 /* SettingsViewController.m */,
 				AE14C90D1B91F7D100EE6826 /* ChooseTimeViewController.h */,
 				AE14C90E1B91F7D100EE6826 /* ChooseTimeViewController.m */,
 				AE42B5DC1B9438C00045933B /* ChooseColorViewController.h */,
@@ -289,7 +284,6 @@
 				AEEE231C1B9843AF003D641A /* Task.m in Sources */,
 				AE3BA68E1B91A2E3009940C7 /* main.m in Sources */,
 				AE8B1DDE1B94AC2B00E82D53 /* CircleProgressView.m in Sources */,
-				AE3BA6B61B91C653009940C7 /* SettingsViewController.m in Sources */,
 				AEEE231F1B9849F6003D641A /* TaskStore.m in Sources */,
 				AEEC4EB51B9998A300145E65 /* TaskAddViewController.m in Sources */,
 			);

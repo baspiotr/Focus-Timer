@@ -94,7 +94,7 @@
         <!--Settings-->
         <scene sceneID="Nn2-D7-Sug">
             <objects>
-                <tableViewController id="z7Y-G7-eML" customClass="SettingsViewController" sceneMemberID="viewController">
+                <tableViewController id="z7Y-G7-eML" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="sLa-8r-k0d">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
