@@ -11,16 +11,12 @@
 
 @interface CircleProgressView ()
 
-
 @end
-
-
 
 @implementation CircleProgressView
 
 CGPoint center;
 float radius;
-
 
 - (void)setUp
 {
@@ -30,8 +26,6 @@ float radius;
     center.y = bounds.origin.x + bounds.size.height / 2.0;
     
     radius = MIN(bounds.size.width, bounds.size.height)/2;
-    
-    
 }
 
 
@@ -39,7 +33,7 @@ float radius;
 {
     
     [self setUp];
-    
+
     UIBezierPath *path = [[UIBezierPath alloc]init];
     
     [path addArcWithCenter:center radius:radius-30 startAngle:0 endAngle:M_PI * 2.0 clockwise:YES];
@@ -55,7 +49,6 @@ float radius;
 
 - (void)setProgress:(float)progress;
 {
-    
     float procent = progress;
     
     UIBezierPath *pathInside;

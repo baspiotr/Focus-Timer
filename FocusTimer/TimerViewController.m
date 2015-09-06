@@ -15,16 +15,11 @@
 
 @interface TimerViewController ()
 
-
 @property (nonatomic, weak) IBOutlet UILabel *timeLabel;
-
 @property (nonatomic, weak) IBOutlet UILabel *startClickableLabel;
-
-@property (strong, nonatomic) IBOutlet UIView *mainView;
-
-@property (weak, nonatomic) IBOutlet CircleProgressView *circleView;
-
-@property (weak, nonatomic) IBOutlet UILabel *currentTaskNameLabel;
+@property (nonatomic, weak) IBOutlet UIView *mainView;
+@property (nonatomic, weak) IBOutlet CircleProgressView *circleView;
+@property (nonatomic, weak) IBOutlet UILabel *currentTaskNameLabel;
 
 @end
 

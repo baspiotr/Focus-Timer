@@ -12,9 +12,7 @@
 
 @interface TaskAddViewController()
 
-
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
-
 @property (weak, nonatomic) IBOutlet UITextField *taskNameTextField;
 
 @end
@@ -22,13 +20,12 @@
 
 @implementation TaskAddViewController
 
-
 - (IBAction)saveTask:(id)sender {
     
     NSString *name = [[NSString alloc]initWithString:self.taskNameTextField.text];
     
     if(![name isEqual:@""]) {
-    [[TaskStore sharedStore]createTaskWithName:name];
+        [[TaskStore sharedStore]createTaskWithName:name];
     }
 }
 

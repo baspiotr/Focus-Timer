@@ -12,18 +12,14 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
-
 @end
 
 @implementation TaskDetailsViewController
-
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     self.nameLabel.text = self.name;
 }
-
-
 
 @end

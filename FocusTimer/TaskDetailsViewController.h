@@ -10,7 +10,6 @@
 
 @interface TaskDetailsViewController : UIViewController
 
-
 @property (nonatomic) NSString *name;
 
 @end

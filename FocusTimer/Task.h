@@ -10,11 +10,9 @@
 
 @interface Task : NSObject
 
-- (instancetype)initWithTaskName:(NSString *)name;
-
 @property (nonatomic, copy) NSString *taskName;
 @property (nonatomic, copy) NSString *idKey;
 
-
+- (instancetype)initWithTaskName:(NSString *)name;
 
 @end
