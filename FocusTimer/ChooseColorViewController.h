@@ -17,6 +17,4 @@ typedef struct {
 } ChoosenColorRGBValues;
 
 
-
-
 @end

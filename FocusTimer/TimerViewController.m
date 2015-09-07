@@ -11,6 +11,7 @@
 #import "ChooseColorViewController.h"
 #import "CircleProgressView.h"
 #import "TaskStore.h"
+#import "Task.h"
 
 
 @interface TimerViewController ()
@@ -36,7 +37,7 @@ ChoosenColorRGBValues myColor;
 #pragma mark timer operations
 
 - (IBAction)runTimer:(id)sender {
-  
+    
     if(counter%2==0) {
         
         secondsToEnd = [ChooseTimeViewController getSeconds];
@@ -54,6 +55,10 @@ ChoosenColorRGBValues myColor;
         [timer invalidate];
         timer = nil;
         
+        if([[TaskStore sharedStore]currentSelectedTask]){
+            [[TaskStore sharedStore]addSecondsToTaskTime:startSecondsValue toTask:[[TaskStore sharedStore]currentSelectedTask]];
+        }
+        
         int min = startSecondsValue/60;
         
         if(min==5) {
@@ -61,13 +66,13 @@ ChoosenColorRGBValues myColor;
         } else {
             self.timeLabel.text = [NSString stringWithFormat:@"%d:00",min];
         }
-    
+        
     }
     
     counter++;
     
     if(counter>10000)counter=1;
-
+    
 }
 
 - (void)runOperations:sender
@@ -90,10 +95,12 @@ ChoosenColorRGBValues myColor;
     if(secondsToEnd == 0){
         [timer invalidate];
         timer = nil;
+        
+        
     }
 }
 
-#pragma mark view 
+#pragma mark view
 
 - (void)viewDidLoad
 {
@@ -106,16 +113,16 @@ ChoosenColorRGBValues myColor;
 {
     [self setBackgorundColorFromRGB];
     
-    self.currentTaskNameLabel.text = [TaskStore sharedStore].currentSelectedTaskName;
-
+    self.currentTaskNameLabel.text = [[[TaskStore sharedStore]currentSelectedTask]taskName];
+    
     int time = [ChooseTimeViewController getSeconds]/60;
     NSString *temp;
     
     
     if(time>=10){
-         temp = [NSString stringWithFormat:@"%d:00",time];
+        temp = [NSString stringWithFormat:@"%d:00",time];
     } else {
-         temp = [NSString stringWithFormat:@"0%d:00",time];
+        temp = [NSString stringWithFormat:@"0%d:00",time];
     }
     
     self.timeLabel.text = temp;

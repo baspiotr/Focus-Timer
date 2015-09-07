@@ -27,7 +27,6 @@
     
 }
 
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -50,7 +49,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [TaskStore sharedStore].currentSelectedTaskName = [[[[TaskStore sharedStore]allTasks]objectAtIndex:indexPath.row] taskName];
+    [TaskStore sharedStore].currentSelectedTask = [[[TaskStore sharedStore]allTasks]objectAtIndex:indexPath.row];
 }
 
 #pragma mark - Navigation

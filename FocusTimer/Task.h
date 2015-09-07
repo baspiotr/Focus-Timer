@@ -12,6 +12,7 @@
 
 @property (nonatomic, copy) NSString *taskName;
 @property (nonatomic, copy) NSString *idKey;
+@property (nonatomic) int secondsSpent;
 
 - (instancetype)initWithTaskName:(NSString *)name;
 

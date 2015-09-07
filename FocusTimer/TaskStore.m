@@ -67,6 +67,13 @@
     [self.privateTasks removeObjectIdenticalTo:item];
 }
 
+- (void)addSecondsToTaskTime:(int)seconds toTask:(Task *)task
+{
+    [self.privateTasks removeObjectIdenticalTo:task];
+    task.secondsSpent +=seconds;
+    [self.privateTasks addObject:task];
+}
+
 
 
 

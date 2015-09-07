@@ -10,25 +10,33 @@
 #import "TaskStore.h"
 #import "TaskTableViewController.h"
 
-@interface TaskAddViewController()
+@interface TaskAddViewController() <UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 @property (weak, nonatomic) IBOutlet UITextField *taskNameTextField;
+@property (weak, nonatomic) IBOutlet UILabel *timeSpentLabel;
 
 @end
 
-
 @implementation TaskAddViewController
 
-- (IBAction)saveTask:(id)sender {
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
     
-    NSString *name = [[NSString alloc]initWithString:self.taskNameTextField.text];
+    self.taskNameTextField.delegate = self;
+}
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    NSString *name = [[NSString alloc]initWithString:textField.text];
     
     if(![name isEqual:@""]) {
         [[TaskStore sharedStore]createTaskWithName:name];
     }
+    
+    [textField resignFirstResponder];
+    return YES;
 }
-
-
 
 @end

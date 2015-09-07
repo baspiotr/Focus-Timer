@@ -13,8 +13,6 @@
 
 @end
 
-
-
 @implementation ChooseColorViewController
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -55,11 +53,6 @@
             break;
     }
     
-    
-    
 }
-
-
-
 
 @end

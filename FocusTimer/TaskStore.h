@@ -12,12 +12,13 @@
 @interface TaskStore : NSObject
 
 @property (nonatomic, readonly) NSArray *allTasks;
-@property (nonatomic) NSString *currentSelectedTaskName;
+@property (nonatomic) Task *currentSelectedTask;
 
 + (instancetype)sharedStore;
 
 - (Task *)createTaskWithName:(NSString *)name;
 - (void)removeTask:(Task *)task;
+- (void)addSecondsToTaskTime:(int)seconds toTask:(Task *)task;
 
 
 @end

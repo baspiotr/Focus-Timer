@@ -20,6 +20,7 @@
         NSUUID *uuid = [[NSUUID alloc] init];
         NSString *key = [uuid UUIDString];
         self.idKey = key;
+        self.secondsSpent = 0;
     }
     
     return self;
