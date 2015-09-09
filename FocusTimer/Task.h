@@ -7,13 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface Task : NSObject
+@interface Task : NSManagedObject
 
 @property (nonatomic, copy) NSString *taskName;
 @property (nonatomic, copy) NSString *idKey;
 @property (nonatomic) int secondsSpent;
-
-- (instancetype)initWithTaskName:(NSString *)name;
 
 @end

@@ -10,22 +10,20 @@
 
 @implementation Task
 
-- (instancetype)initWithTaskName:(NSString *)name
+@dynamic taskName;
+@dynamic idKey;
+@dynamic secondsSpent;
+
+- (void)awakeFromInsert
 {
-    self = [super init];
+    [super awakeFromInsert];
     
-    if(self) {
-        self.taskName = name;
-        
-        NSUUID *uuid = [[NSUUID alloc] init];
-        NSString *key = [uuid UUIDString];
-        self.idKey = key;
-        self.secondsSpent = 0;
-    }
-    
-    return self;
-    
+    NSUUID *uuid = [[NSUUID alloc] init];
+    NSString *key = [uuid UUIDString];
+    self.idKey = key;
+    self.secondsSpent = 0;
 }
+
 
 - (NSString *)description
 {
@@ -33,8 +31,6 @@
     
     return descriptionString;
 }
-
-
 
 @end
 

@@ -66,7 +66,6 @@ ChoosenColorRGBValues myColor;
         } else {
             self.timeLabel.text = [NSString stringWithFormat:@"%d:00",min];
         }
-        
     }
     
     counter++;
@@ -95,8 +94,6 @@ ChoosenColorRGBValues myColor;
     if(secondsToEnd == 0){
         [timer invalidate];
         timer = nil;
-        
-        
     }
 }
 
@@ -117,7 +114,6 @@ ChoosenColorRGBValues myColor;
     
     int time = [ChooseTimeViewController getSeconds]/60;
     NSString *temp;
-    
     
     if(time>=10){
         temp = [NSString stringWithFormat:@"%d:00",time];

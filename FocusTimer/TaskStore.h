@@ -19,6 +19,6 @@
 - (Task *)createTaskWithName:(NSString *)name;
 - (void)removeTask:(Task *)task;
 - (void)addSecondsToTaskTime:(int)seconds toTask:(Task *)task;
-
+- (BOOL)saveChanges;
 
 @end

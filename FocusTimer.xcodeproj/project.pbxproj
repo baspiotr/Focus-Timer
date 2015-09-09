@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE0E7D821B9EF28200A5EC61 /* FocusTimer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AE0E7D801B9EF28200A5EC61 /* FocusTimer.xcdatamodeld */; };
 		AE14C90F1B91F7D100EE6826 /* ChooseTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE14C90E1B91F7D100EE6826 /* ChooseTimeViewController.m */; };
 		AE3BA68E1B91A2E3009940C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3BA68D1B91A2E3009940C7 /* main.m */; };
 		AE3BA6911B91A2E3009940C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3BA6901B91A2E3009940C7 /* AppDelegate.m */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE0E7D811B9EF28200A5EC61 /* FocusTimer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FocusTimer.xcdatamodel; sourceTree = "<group>"; };
 		AE14C90D1B91F7D100EE6826 /* ChooseTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseTimeViewController.h; sourceTree = "<group>"; };
 		AE14C90E1B91F7D100EE6826 /* ChooseTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseTimeViewController.m; sourceTree = "<group>"; };
 		AE3BA6881B91A2E3009940C7 /* FocusTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +159,7 @@
 		AEEC4EB11B9997E800145E65 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AE0E7D801B9EF28200A5EC61 /* FocusTimer.xcdatamodeld */,
 				AEEE231A1B9843AF003D641A /* Task.h */,
 				AEEE231B1B9843AF003D641A /* Task.m */,
 				AEEE231D1B9849F6003D641A /* TaskStore.h */,
@@ -275,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE0E7D821B9EF28200A5EC61 /* FocusTimer.xcdatamodeld in Sources */,
 				AE3BA6B31B91A9C9009940C7 /* TimerViewController.m in Sources */,
 				AE3BA6911B91A2E3009940C7 /* AppDelegate.m in Sources */,
 				AEB321691B9AF18A001FEE81 /* TaskDetailsViewController.m in Sources */,
@@ -494,6 +498,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AE0E7D801B9EF28200A5EC61 /* FocusTimer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AE0E7D811B9EF28200A5EC61 /* FocusTimer.xcdatamodel */,
+			);
+			currentVersion = AE0E7D811B9EF28200A5EC61 /* FocusTimer.xcdatamodel */;
+			path = FocusTimer.xcdatamodeld;
+			sourceTree = SOURCE_ROOT;
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AE3BA6801B91A2E3009940C7 /* Project object */;
 }
