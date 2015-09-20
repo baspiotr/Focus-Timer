@@ -28,7 +28,6 @@
     self.nameLabel.text = self.name;
     [self.nameLabel sizeToFit];
     
-    
     self.timeSpentLabel.text = [NSString stringWithFormat:@"%d min",[[[TaskStore sharedStore]currentSelectedTask]secondsSpent]/60];
 }
 
@@ -37,26 +36,7 @@
     
     [[TaskStore sharedStore]removeTask:[[TaskStore sharedStore]currentSelectedTask]];
     
-    
-    
-    
-    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @end
