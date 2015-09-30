@@ -24,7 +24,6 @@
     self.secondsSpent = 0;
 }
 
-
 - (NSString *)description
 {
     NSString *descriptionString = [[NSString alloc]initWithFormat:@"Item name %@",self.taskName];

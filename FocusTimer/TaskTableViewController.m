@@ -24,7 +24,6 @@
     [super viewWillAppear:animated];
     
     [self.tableView reloadData];
-    
 }
 
 #pragma mark - Table view data source
@@ -37,7 +36,6 @@
     return [[[TaskStore sharedStore]allTasks]count];
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"taskCell" forIndexPath:indexPath];
@@ -45,7 +43,6 @@
     
     return cell;
 }
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

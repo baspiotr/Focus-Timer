@@ -31,10 +31,8 @@
     radius = MIN(bounds.size.width, bounds.size.height)/2;
 }
 
-
 - (void)drawRect:(CGRect)rect
 {
-    
     [self setUp];
 
     UIBezierPath *path = [[UIBezierPath alloc]init];
@@ -56,19 +54,17 @@
     
     UIBezierPath *pathInside;
     
-    if(!pathInside){
-    pathInside = [[UIBezierPath alloc]init];
+    if (!pathInside) {
+        pathInside = [[UIBezierPath alloc]init];
     }
     
     procent = procent * 3.6;
     
     float radian = procent * (M_PI/180);
     
-    
     [pathInside removeAllPoints];
     
     [pathInside addArcWithCenter:center radius:radius-30 startAngle:0 endAngle:radian clockwise:YES];
-   
 
     [[UIColor blackColor]setStroke];
     pathInside.lineWidth = 3;
@@ -76,7 +72,6 @@
     [pathInside stroke];
     
 }
-
 
 
 @end

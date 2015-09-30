@@ -45,7 +45,7 @@ ChoosenColorRGBValues myColor;
 
 - (IBAction)runTimer:(id)sender {
     
-    if(counter%2==0) {
+    if (counter%2==0) {
         
         secondsToEnd = [ChooseTimeViewController getSeconds];
         
@@ -62,13 +62,13 @@ ChoosenColorRGBValues myColor;
         [timer invalidate];
         timer = nil;
         
-        if([[TaskStore sharedStore]currentSelectedTask]){
+        if ([[TaskStore sharedStore]currentSelectedTask]) {
             [[TaskStore sharedStore]addSecondsToTaskTime:startSecondsValue toTask:[[TaskStore sharedStore]currentSelectedTask]];
         }
         
         int min = startSecondsValue/60;
         
-        if(min==5) {
+        if (min==5) {
             self.timeLabel.text = [NSString stringWithFormat:@"0%d:00",min];
         } else {
             self.timeLabel.text = [NSString stringWithFormat:@"%d:00",min];
@@ -98,7 +98,7 @@ ChoosenColorRGBValues myColor;
     
     self.timeLabel.text = timeStr;
     
-    if(secondsToEnd == 0){
+    if (secondsToEnd == 0) {
         [timer invalidate];
         timer = nil;
     }
@@ -125,7 +125,7 @@ ChoosenColorRGBValues myColor;
     int time = [ChooseTimeViewController getSeconds]/60;
     NSString *temp;
     
-    if(time>=10){
+    if (time>=10) {
         temp = [NSString stringWithFormat:@"%d:00",time];
     } else {
         temp = [NSString stringWithFormat:@"0%d:00",time];

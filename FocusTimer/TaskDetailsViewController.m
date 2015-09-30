@@ -16,7 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeSpentLabel;
 @property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 
-
 @end
 
 @implementation TaskDetailsViewController
@@ -31,12 +30,10 @@
     self.timeSpentLabel.text = [NSString stringWithFormat:@"%d min",[[[TaskStore sharedStore]currentSelectedTask]secondsSpent]/60];
 }
 
-
 - (IBAction)deteteTask:(id)sender {
     
     [[TaskStore sharedStore]removeTask:[[TaskStore sharedStore]currentSelectedTask]];
     
 }
-
 
 @end

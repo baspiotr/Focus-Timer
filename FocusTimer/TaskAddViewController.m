@@ -13,7 +13,6 @@
 @interface TaskAddViewController() <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *taskNameTextField;
-@property (weak, nonatomic) IBOutlet UILabel *timeSpentLabel;
 
 @end
 
@@ -26,7 +25,6 @@
     self.taskNameTextField.delegate = self;
 }
 
-
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     NSString *name = [[NSString alloc]initWithString:textField.text];
@@ -38,6 +36,5 @@
     [textField resignFirstResponder];
     return YES;
 }
-
 
 @end

@@ -19,9 +19,7 @@
 {
     int position = (int)indexPath.row ;
     
-    
     ChoosenColorRGBValues myColor;
-    
     
     switch (position) {
         case 0:
