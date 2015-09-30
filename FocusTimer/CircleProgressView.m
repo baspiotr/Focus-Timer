@@ -11,12 +11,15 @@
 
 @interface CircleProgressView ()
 
+@property (nonatomic) CGPoint center;
+@property (nonatomic) float radius;
+
 @end
 
 @implementation CircleProgressView
 
-CGPoint center;
-float radius;
+@synthesize center;
+@synthesize radius;
 
 - (void)setUp
 {

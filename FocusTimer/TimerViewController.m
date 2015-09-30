@@ -22,17 +22,24 @@
 @property (nonatomic, weak) IBOutlet CircleProgressView *circleView;
 @property (nonatomic, weak) IBOutlet UILabel *currentTaskNameLabel;
 
+@property (nonatomic) int secondsToEnd;
+@property (nonatomic) NSTimer *timer;
+@property (nonatomic) int counter;
+@property (nonatomic) int startSecondsValue;
+@property (nonatomic) double procentOfComplete;
+
 @end
 
 @implementation TimerViewController
 
-int secondsToEnd = 25*60;
-NSTimer *timer;
-int counter=0;
-
-int startSecondsValue;
-double procentOfComplete;
 ChoosenColorRGBValues myColor;
+
+@synthesize secondsToEnd;
+@synthesize timer;
+@synthesize counter;
+@synthesize startSecondsValue;
+@synthesize procentOfComplete;
+
 
 #pragma mark timer operations
 
@@ -101,6 +108,9 @@ ChoosenColorRGBValues myColor;
 
 - (void)viewDidLoad
 {
+    secondsToEnd = 25*60;
+    counter = 0;
+    
     myColor.red=245;
     myColor.green=67;
     myColor.blue=55;

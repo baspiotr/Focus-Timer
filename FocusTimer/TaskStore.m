@@ -54,6 +54,7 @@
         NSURL *storeURL = [NSURL fileURLWithPath:path];
         
         NSError *error;
+        
         if (![psc addPersistentStoreWithType:NSSQLiteStoreType
                                configuration:nil
                                          URL:storeURL
