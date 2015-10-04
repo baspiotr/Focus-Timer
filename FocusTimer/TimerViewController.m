@@ -119,7 +119,7 @@ ChoosenColorRGBValues myColor;
 - (void)viewWillAppear:(BOOL)animated
 {
     [self setBackgorundColorFromRGB];
-    
+        
     self.currentTaskNameLabel.text = [[[TaskStore sharedStore]currentSelectedTask]taskName];
     
     int time = [ChooseTimeViewController getSeconds]/60;
